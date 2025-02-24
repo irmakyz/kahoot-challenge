@@ -1,70 +1,200 @@
-# Getting Started with Create React App
+# Kahoot Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **React application** for displaying a list of **Pokémon** and their details. It uses **React Query** for data fetching, **React Router** for routing, and **SCSS** for styling.
 
-## Available Scripts
+## 📜 Table of Contents
+- [Installation](#installation)
+- [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
+- [Components](#components)
+- [Testing](#testing)
+- [Code Splitting](#code-splitting)
+- [Styling](#styling)
+- [Media Queries](#media-queries)
 
+---
+
+## 🚀 Installation
+To install the project dependencies, run:
+```sh
+npm install
+```
+
+---
+
+## 📌 Available Scripts
 In the project directory, you can run:
 
-### `npm start`
+### **Run the development server**
+```sh
+npm start
+```
+This will start the app in development mode. Open **[http://localhost:3000](http://localhost:3000)** to view it in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Run tests**
+```sh
+npm test
+```
+Launches the test runner in interactive watch mode.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Build the app**
+```sh
+npm run build
+```
+Creates an optimized production build in the `build/` folder.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📂 Project Structure
+```
+kahoot-challenge/
+├── node_modules/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   │   └── styles/
+│   │         ├── variables.scss
+│   │         ├── mixins.scss
+│   │         ├── media-queries.scss
+│   ├── components/
+│   │   ├── atoms/
+│   │   │   ├── Loader/
+│   │   │   │   ├── Loader.tsx
+│   │   │   │   ├── Loader.scss
+│   │   │   │   ├── Loader.test.tsx
+│   │   │   ├── Button/
+│   │   │   │   ├── Button.tsx
+│   │   │   │   ├── Button.scss
+│   │   │   │   ├── Button.test.tsx
+│   │   │   │   ├── constants.ts
+│   │   │   ├── Image/
+│   │   │   │   ├── Image.tsx
+│   │   │   │   ├── Image.scss
+│   │   │   │   ├── Image.test.tsx
+│   │   ├── molecules/
+│   │   │   ├── Chip/
+│   │   │   │   ├── Chip.tsx
+│   │   │   │   ├── Chip.scss
+│   │   │   │   ├── Chip.test.tsx
+│   │   │   ├── ItemStats/
+│   │   │   │   ├── ItemStats.tsx
+│   │   │   │   ├── ItemStats.scss
+│   │   │   │   ├── ItemStats.test.tsx
+│   │   ├── organisms/
+│   │   │   ├── ListItem/
+│   │   │   │   ├── ListItem.tsx
+│   │   │   │   ├── ListItem.scss
+│   │   │   │   ├── ListItem.test.tsx
+│   │   │   ├── ListItemDetails/
+│   │   │   │   ├── ListItemDetails.tsx
+│   │   │   │   ├── ListItemDetails.scss
+│   │   │   │   ├── ListItemDetails.test.tsx
+│   │   │   ├── ListItemInfo/
+│   │   │   │   ├── ListItemInfo.tsx
+│   │   │   │   ├── ListItemInfo.scss
+│   │   │   │   ├── ListItemInfo.test.tsx
+│   ├── templates/
+│   │   ├── ListItemsTable/
+│   │   │   ├── ListItemsTable.tsx
+│   │   │   ├── ListItemsTable.scss
+│   │   │   ├── ListItemsTable.test.tsx
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.tsx
+│   │   │   ├── Home.scss
+│   │   │   ├── Home.test.tsx
+│   │   ├── Details/
+│   │   │   ├── Details.tsx
+│   │   │   ├── Details.scss
+│   │   │   ├── Details.test.tsx
+│   ├── services/
+│   │   └── api.ts
+│   ├── types/
+│   │   └── types.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   ├── index.scss
+│   ├── reportWebVitals.js
+├── package.json
+├── tsconfig.json
+├── webpack.config.ts
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 Components
+### **Atoms**
+- **Loader**: A loading spinner component.
+- **Button**: A button component with various styles and sizes.
+- **Image**: A component to display images.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Molecules**
+- **Chip**: A small label-like component with colors.
+- **ItemStats**: Displays item statistics.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Organisms**
+- **ListItem**: Displays a list item with details.
+- **ListItemDetails**: Shows detailed information about an item.
+- **ListItemInfo**: Additional information for an item.
 
-### `npm run eject`
+### **Templates**
+- **ListItemsTable**: A table for displaying multiple list items.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Pages**
+- **Home**: Displays a list of Pokémon.
+- **Details**: Displays detailed information about a Pokémon.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧪 Testing
+This project uses **Jest** and **React Testing Library**. Test files are located alongside their respective components.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run the tests:
+```sh
+npm test
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ✂️ Code Splitting
+This project uses **React.lazy** and **Suspense** for code splitting. The `Home` and `Details` components are dynamically imported to enhance performance.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🎨 Styling
+- **SCSS** is used for styling.
+- Variables are defined in `variables.scss` for consistency.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📱 Media Queries
+Breakpoints are defined in `media-queries.scss`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Device  | Width Range |
+|---------|------------|
+| 📱 Mobile  | 0 - 480px |
+| 📲 Tablet  | 480px - 768px |
+| 💻 Laptop  | 768px and above |
 
-### Making a Progressive Web App
+### **Example usage:**
+```scss
+@import './assets/styles/media-queries.scss';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+.component {
+  @include mobile {
+    // Styles for mobile
+  }
+  @include tablet {
+    // Styles for tablet
+  }
+  @include laptop {
+    // Styles for laptop
+  }
+}
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Enjoy coding! 🚀**
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
