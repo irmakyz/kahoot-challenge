@@ -1,26 +1,40 @@
 // Color variables
 $primary-color: #ff4747;
-$secondary-color: #6c757d;
+$secondary-color: #9748ff;
+$tertiary-color: transparent;
 $danger-color: #dc3545;
 $success-color: #28a745;
 $white-color: #fff;
+$black-color: #000;
 
 // Font variables
 $font-family: 'Poppins', sans-serif;
-$font-size-xsmall: 12px;
-$font-size-small: 14px;
-$font-size-medium: 1rem;
-$font-size-large: 1.2rem;
-$font-weight: 600;
+$font-size-xsmall: 14px;
+$font-size-small: 16px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
+$font-size-xlarge: 32px;
+$font-size-xxlarge: 52px;
+
+$font-weight-light: 400;
+$font-weight-regular: 600;
+$font-weight-bold: 700;
 
 // Padding variables
 $padding-xsmall: 4px 12px;
 $padding-small: 8px;
+$padding-regular: 8px 16px;
 $padding-medium: 8px 24px;
 $padding-large: 15px 30px;
 $padding-xlarge: 20px 16px;
 $padding-xxlarge: 36px 32px;
+$padding-xxxlarge: 40px;
 
 // Border variables
 $border-radius-small: 8px;
 $border-radius: 12px;
+
+$spacing-xsmall: 8px;
+$spacing-small: 10px;
+$spacing-medium: 16px;
+$spacing-large: 20px;
