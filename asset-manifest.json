@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kahoot-challenge/static/css/main.5a532934.css",
+    "main.js": "/kahoot-challenge/static/js/main.253f5536.js",
+    "static/css/100.49918bd6.chunk.css": "/kahoot-challenge/static/css/100.49918bd6.chunk.css",
+    "static/js/100.d2099f36.chunk.js": "/kahoot-challenge/static/js/100.d2099f36.chunk.js",
+    "static/css/37.32796a3a.chunk.css": "/kahoot-challenge/static/css/37.32796a3a.chunk.css",
+    "static/js/37.0feba1ee.chunk.js": "/kahoot-challenge/static/js/37.0feba1ee.chunk.js",
+    "static/js/367.9a71f880.chunk.js": "/kahoot-challenge/static/js/367.9a71f880.chunk.js",
+    "index.html": "/kahoot-challenge/index.html",
+    "main.5a532934.css.map": "/kahoot-challenge/static/css/main.5a532934.css.map",
+    "main.253f5536.js.map": "/kahoot-challenge/static/js/main.253f5536.js.map",
+    "100.49918bd6.chunk.css.map": "/kahoot-challenge/static/css/100.49918bd6.chunk.css.map",
+    "100.d2099f36.chunk.js.map": "/kahoot-challenge/static/js/100.d2099f36.chunk.js.map",
+    "37.32796a3a.chunk.css.map": "/kahoot-challenge/static/css/37.32796a3a.chunk.css.map",
+    "37.0feba1ee.chunk.js.map": "/kahoot-challenge/static/js/37.0feba1ee.chunk.js.map",
+    "367.9a71f880.chunk.js.map": "/kahoot-challenge/static/js/367.9a71f880.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a532934.css",
+    "static/js/main.253f5536.js"
+  ]
+}
