@@ -1,0 +1,12 @@
+@import '../../../assets/styles/mixins.scss';
+@import '../../../assets/styles/variables.scss';
+
+.chip{
+    border-radius: $border-radius-small;
+    background-color: rgba(217, 217, 217, 0.5);
+    font-size: $font-size-xsmall;
+    color: $white-color;
+    font-weight: $font-weight-regular;
+    padding: $padding-xsmall;
+    text-align: center;
+}

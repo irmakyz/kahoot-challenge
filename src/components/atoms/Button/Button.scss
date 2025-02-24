@@ -1,0 +1,58 @@
+@import "../../../assets/styles/mixins.scss";
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/media-queries.scss";
+
+.button {
+  all: unset;
+  border: none;
+  border-radius: $border-radius;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+
+  &.small {
+    @include button-size($padding-small, $font-size-small);
+    height: 25px;
+    @include mobile {
+      @include button-size($padding-xsmall, $font-size-xsmall);
+    }
+  }
+
+  &.medium {
+    @include button-size($padding-medium, $font-size-medium);
+  }
+
+  &.large {
+    @include button-size($padding-medium, $font-size-large);
+    @include mobile {
+      @include button-size($padding-medium, $font-size-medium);
+    }
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.primary {
+    @include button-color($primary-color);
+  }
+
+  &.secondary {
+    @include button-color($secondary-color);
+  }
+
+  &.tertiary {
+    @include button-color($tertiary-color, $black-color);
+  }
+
+  &.danger {
+    @include button-color($danger-color);
+  }
+
+  &.success {
+    @include button-color($success-color);
+  }
+}

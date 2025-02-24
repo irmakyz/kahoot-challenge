@@ -1,0 +1,27 @@
+@import '../../../assets/styles/mixins.scss';
+@import '../../../assets/styles/variables.scss';
+
+.item-stats {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xsmall;
+  color: rgba(0, 0, 0, 1);
+  font-weight: $font-weight-light;
+
+  &__value {
+    font-size: $font-size-small;
+    color: black;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__label {
+    color: rgba(0, 0, 0, 1);
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    text-align: start;
+  }
+}

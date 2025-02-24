@@ -1,0 +1,22 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/media-queries.scss";
+
+.home {
+  @include flex-center;
+  flex-direction: column;
+  gap: $spacing-large;
+  padding: $padding-xxxlarge;
+
+  &__header {
+    font-size: $font-size-xxlarge;
+    font-weight: $font-weight-bold;
+    color: $secondary-color;
+    margin-bottom: 20px;
+    align-self: flex-start;
+
+    @include mobile {
+      font-size: $font-size-xlarge;
+    }   
+  }
+}

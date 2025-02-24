@@ -1,0 +1,9 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
+.details {
+    @include flex-center;
+    
+    padding: $padding-xxlarge;
+    height: 100%;
+  }

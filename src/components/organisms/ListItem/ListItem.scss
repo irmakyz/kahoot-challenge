@@ -1,0 +1,73 @@
+@import "../../../assets/styles/mixins.scss";
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/media-queries.scss";
+
+.list-item {
+  font-family: Poppins, sans-serif;
+  max-width: 1000px;
+  border-radius: $border-radius;
+  background-color: rgba(151, 71, 255, 1);
+  padding: $padding-large;
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-large;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacing-xsmall;
+    padding: $padding-small;
+  }
+
+  &__action-button-container {
+    align-self: self-end;
+    @include mobile {
+      align-self: center;
+    }
+  }
+}
+
+.list-item__content {
+  display: flex;
+  gap: $spacing-medium;
+  align-items: flex-start;
+}
+
+.list-item__image {
+  width: 80px;
+  height: 80px;
+  border-radius: $border-radius;
+  background-color: rgba(217, 217, 217, 1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xsmall;
+}
+
+.list-item__header {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xsmall;
+}
+
+.list-item__name {
+  color: rgba(255, 255, 255, 1);
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.list-item__description {
+  color: rgba(0, 0, 0, 1);
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-light;
+  line-height: 1;
+  margin: 0;
+}

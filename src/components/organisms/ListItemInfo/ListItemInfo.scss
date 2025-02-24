@@ -1,0 +1,52 @@
+@import "../../../assets/styles/variables.scss";
+
+.list-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $spacing-medium;
+  &__name {
+    color: #333333;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  &__types-container {
+    display: flex;
+    gap: $spacing-xsmall;
+  }
+
+  &__stats-container {
+    width: 100%;
+    .list-item-info__stats-title {
+      font-size: $font-size-large;
+      width: 100%;
+      display: flex;
+    }
+  }
+  &__abilities-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xsmall;
+
+    .list-item-info__abilities-title {
+      color: #333333;
+      font-size: $font-size-large;
+      font-weight: $font-weight-bold;
+      display: flex;
+      margin: 0;
+    }
+    .list-item-info__abilities-chips {
+      display: flex;
+      flex-direction: row;
+      gap: $spacing-xsmall;
+    }
+  }
+
+  &__base-experience-container {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xsmall;
+  }
+}

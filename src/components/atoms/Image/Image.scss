@@ -1,0 +1,32 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/mixins.scss";
+@import "../../../assets/styles/media-queries.scss";
+
+.image-container {
+  background-color: $secondary-color;
+  border-radius: $border-radius;
+  @include flex-center;
+  width: fit-content;
+  padding: $padding-large;
+  @include tablet {
+    padding: $padding-small;
+  }
+  @include mobile {
+    padding: $padding-small;
+  }
+  .image {
+    border-radius: $border-radius;
+    background-color: $white-color;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    aspect-ratio: 1;
+    height: auto;
+    object-fit: contain;
+    @include tablet {
+      width: 280px;
+    }
+    @include mobile {
+      width: 150px;
+    }   
+  }
+}
