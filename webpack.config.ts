@@ -1,6 +1,8 @@
-import path from 'path';
 import { Configuration } from 'webpack';
 import 'webpack-dev-server';
+
+const path = require("path");
+
 
 const config: Configuration = {
   entry: './src/index.tsx',

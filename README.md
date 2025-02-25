@@ -47,78 +47,83 @@ Creates an optimized production build in the `build/` folder.
 
 ## 📂 Project Structure
 ```
+```
 kahoot-challenge/
 ├── node_modules/
 ├── public/
 │   └── index.html
 ├── src/
 │   ├── assets/
+│   │   └── images/
+│   │         └── pokeball.png
 │   │   └── styles/
 │   │         ├── variables.scss
-│   │         ├── mixins.scss
-│   │         ├── media-queries.scss
+│   │         └── media-queries.scss
 │   ├── components/
 │   │   ├── atoms/
 │   │   │   ├── Loader/
 │   │   │   │   ├── Loader.tsx
-│   │   │   │   ├── Loader.scss
-│   │   │   │   ├── Loader.test.tsx
+│   │   │   │   └── Loader.scss
+│   │   │   │   └── index.ts
 │   │   │   ├── Button/
 │   │   │   │   ├── Button.tsx
-│   │   │   │   ├── Button.scss
-│   │   │   │   ├── Button.test.tsx
-│   │   │   │   ├── constants.ts
+│   │   │   │   └── Button.scss
+│   │   │   │   └── index.ts
 │   │   │   ├── Image/
 │   │   │   │   ├── Image.tsx
-│   │   │   │   ├── Image.scss
-│   │   │   │   ├── Image.test.tsx
+│   │   │   │   └── Image.scss
+│   │   │   │   └── index.ts
 │   │   ├── molecules/
 │   │   │   ├── Chip/
 │   │   │   │   ├── Chip.tsx
-│   │   │   │   ├── Chip.scss
-│   │   │   │   ├── Chip.test.tsx
+│   │   │   │   └── Chip.scss
+│   │   │   │   └── index.ts
 │   │   │   ├── ItemStats/
 │   │   │   │   ├── ItemStats.tsx
-│   │   │   │   ├── ItemStats.scss
-│   │   │   │   ├── ItemStats.test.tsx
+│   │   │   │   └── ItemStats.scss
+│   │   │   │   └── index.ts
 │   │   ├── organisms/
 │   │   │   ├── ListItem/
 │   │   │   │   ├── ListItem.tsx
-│   │   │   │   ├── ListItem.scss
-│   │   │   │   ├── ListItem.test.tsx
+│   │   │   │   └── ListItem.scss
+│   │   │   │   └── index.ts
 │   │   │   ├── ListItemDetails/
 │   │   │   │   ├── ListItemDetails.tsx
-│   │   │   │   ├── ListItemDetails.scss
-│   │   │   │   ├── ListItemDetails.test.tsx
+│   │   │   │   └── ListItemDetails.scss
+│   │   │   │   └── index.ts
 │   │   │   ├── ListItemInfo/
 │   │   │   │   ├── ListItemInfo.tsx
-│   │   │   │   ├── ListItemInfo.scss
-│   │   │   │   ├── ListItemInfo.test.tsx
-│   ├── templates/
-│   │   ├── ListItemsTable/
-│   │   │   ├── ListItemsTable.tsx
-│   │   │   ├── ListItemsTable.scss
-│   │   │   ├── ListItemsTable.test.tsx
+│   │   │   │   └── ListItemInfo.scss
+│   │   │   │   └── index.ts
+│   │   ├── templates/
+│   │   │   ├── ListItemsTable/
+│   │   │   │   ├── ListItemsTable.tsx
+│   │   │   │   └── ListItemsTable.scss
+│   │   │   │   └── index.ts
+│   │   ├── index.ts
 │   ├── pages/
 │   │   ├── Home/
 │   │   │   ├── Home.tsx
-│   │   │   ├── Home.scss
-│   │   │   ├── Home.test.tsx
+│   │   │   └── Home.scss
 │   │   ├── Details/
 │   │   │   ├── Details.tsx
-│   │   │   ├── Details.scss
-│   │   │   ├── Details.test.tsx
+│   │   │   └── Details.scss
 │   ├── services/
 │   │   └── api.ts
 │   ├── types/
 │   │   └── types.ts
 │   ├── App.tsx
+│   ├── Routes.ts
 │   ├── index.tsx
 │   ├── index.scss
 │   ├── reportWebVitals.js
+│   ├── images.d.ts
 ├── package.json
 ├── tsconfig.json
 ├── webpack.config.ts
+├── jest.config.js
+└── .babelrc
+```
 ```
 
 ---

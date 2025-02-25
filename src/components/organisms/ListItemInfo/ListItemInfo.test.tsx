@@ -7,8 +7,8 @@ const mockListItemInfoProps = {
   name: "Pikachu",
   types: ["Electric"],
   abilities: ["Static"],
-  baseExperience: 112,
-  stats: [{ name: "Speed", value: 90 }],
+  experience: 112,
+  powers: [{ name: "Speed", value: 90 }],
 };
 
 test("renders ListItemInfo component with correct name and description", () => {

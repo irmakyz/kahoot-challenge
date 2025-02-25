@@ -1,8 +1,7 @@
 import React from "react";
-import { ListItem } from "../../organisms/ListItem/ListItem.tsx";
 import { ListProps } from "./types";
 import "./List.scss";
-import Loader from "../../atoms/Loader/Loader.tsx";
+import { ListItem, Loader } from "../../index.ts";
 
 export const List: React.FC<ListProps> = ({ listItems, isLoading = false }) => {
   return (

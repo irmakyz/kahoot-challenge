@@ -1,14 +1,14 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../services/api.ts";
-import { List } from "../../components/templates/List/List.tsx";
-import Button from "../../components/atoms/Button/Button.tsx";
 import { BUTTON_SIZES } from "../../components/atoms/Button/constants.ts";
 import "./Home.scss";
 import pokeball from "../../assets/images/pokeball.png";
+import { Page, ListItem } from "./types.ts";
+import { Button, List } from "../../components/index.ts";
 
 const Home: React.FC = () => {
-  const [sortedListItems, setSortedListItems] = useState<any[]>([]);
+  const [sortedListItems, setSortedListItems] = useState<ListItem[]>([]);
   const {
     data: listItems,
     error,
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     queryKey: ["listItems"],
     queryFn: ({ pageParam = 0 }: { pageParam: number }) =>
       fetchData({ pageParam }),
-    getNextPageParam: (lastPage) =>
+    getNextPageParam: (lastPage: Page): number | undefined =>
       lastPage.hasMore ? lastPage.nextPage : undefined,
     initialPageParam: 0,
   });
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
         })
       );
       const sortedData = resolvedItems
-        .filter((item) => item?.name) 
+        .filter((item) => item?.name)
         .sort((a, b) => a.name.localeCompare(b.name));
 
       setSortedListItems(sortedData);

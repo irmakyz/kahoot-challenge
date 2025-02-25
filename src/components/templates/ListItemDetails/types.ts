@@ -1,11 +1,5 @@
-import { Stat } from "../../../types";
+import { ItemDetails, Stat } from "../../../types";
 
-export interface ListItemDetailsProps {
-  name: string;
-  types: string[];
-  stats: Stat[];
-  abilities: string[];
-  baseExperience: number;
-  imageUrl: string;
+export interface ListItemDetailsProps extends ItemDetails {
   isLoading?: boolean;
 }

@@ -12,7 +12,7 @@
   font-family: $font-family;
   font-weight: $font-weight-regular;
 
-  &.small {
+  &--small {
     @include button-size($padding-small, $font-size-small);
     height: 25px;
     @include mobile {
@@ -20,39 +20,39 @@
     }
   }
 
-  &.medium {
+  &--medium {
     @include button-size($padding-medium, $font-size-medium);
   }
 
-  &.large {
+  &--large {
     @include button-size($padding-medium, $font-size-large);
     @include mobile {
       @include button-size($padding-medium, $font-size-medium);
     }
   }
 
-  &.block {
+  &--block {
     display: block;
     width: 100%;
   }
 
-  &.primary {
+  &--primary {
     @include button-color($primary-color);
   }
 
-  &.secondary {
+  &--secondary {
     @include button-color($secondary-color);
   }
 
-  &.tertiary {
+  &--tertiary {
     @include button-color($tertiary-color, $black-color);
   }
 
-  &.danger {
+  &--danger {
     @include button-color($danger-color);
   }
 
-  &.success {
+  &--success {
     @include button-color($success-color);
   }
 }

@@ -24,5 +24,3 @@ test("renders ListItem component", () => {
   );
   expect(screen.getByText("Pikachu")).toBeInTheDocument();
 });
-
-

@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Image from "./Image.tsx";
+import { Image } from "./Image.tsx";
 
 const mockImageProps = {
   imageUrl: "https://example.com/pikachu.png",

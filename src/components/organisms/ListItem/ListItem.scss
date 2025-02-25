@@ -3,6 +3,7 @@
 @import "../../../assets/styles/media-queries.scss";
 
 .list-item {
+  align-items: center;
   font-family: Poppins, sans-serif;
   max-width: 1000px;
   border-radius: $border-radius;
@@ -15,6 +16,7 @@
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
+  
   @include mobile {
     flex-direction: column;
     justify-content: center;
@@ -23,51 +25,52 @@
   }
 
   &__action-button-container {
-    align-self: self-end;
+    align-self: flex-end;
+    
     @include mobile {
       align-self: center;
     }
   }
-}
 
-.list-item__content {
-  display: flex;
-  gap: $spacing-medium;
-  align-items: flex-start;
-}
+  &__content {
+    display: flex;
+    gap: $spacing-medium;
+    align-items: flex-start;
+  }
 
-.list-item__image {
-  width: 80px;
-  height: 80px;
-  border-radius: $border-radius;
-  background-color: rgba(217, 217, 217, 1);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+  &__image {
+    width: 80px;
+    height: 80px;
+    border-radius: $border-radius;
+    background-color: rgba(217, 217, 217, 1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-.list-item__info {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-xsmall;
-}
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xsmall;
+  }
 
-.list-item__header {
-  display: flex;
-  align-items: center;
-  gap: $spacing-xsmall;
-}
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xsmall;
+  }
 
-.list-item__name {
-  color: rgba(255, 255, 255, 1);
-  font-size: $font-size-large;
-  font-weight: $font-weight-bold;
-  line-height: 1.4;
-  margin: 0;
-}
+  &__name {
+    color: rgba(255, 255, 255, 1);
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    line-height: 1.4;
+    margin: 0;
+  }
 
-.list-item__description {
-  color: rgba(0, 0, 0, 1);
-  font-size: $font-size-xsmall;
-  font-weight: $font-weight-light;
-  line-height: 1;
-  margin: 0;
+  &__description {
+    color: rgba(0, 0, 0, 1);
+    font-size: $font-size-xsmall;
+    font-weight: $font-weight-light;
+    line-height: 1;
+    margin: 0;
+  }
 }

@@ -1,6 +1,7 @@
+import { ReactNode } from "react";
+
 export interface ItemStatsProps {
-    icon: string;
-    label: string;
-    values: number[] | string[] ;
-  }
-  
+  icon?: ReactNode;
+  label?: string;
+  values?: (string | number)[];
+}

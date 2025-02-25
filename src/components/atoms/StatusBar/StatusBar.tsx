@@ -2,7 +2,7 @@ import React from "react";
 import { StatusBarProps } from "./types";
 import "./StatusBar.scss";
 
-export const StatusBar: React.FC<StatusBarProps> = ({ name, value }) => {
+ export const StatusBar: React.FC<StatusBarProps> = ({ name, value }) => {
   const maxValue = 100;
   const percentage = (value / maxValue) * 100;
 

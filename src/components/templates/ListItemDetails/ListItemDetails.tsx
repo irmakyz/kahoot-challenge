@@ -1,19 +1,16 @@
 import React from "react";
-import Image from "../../atoms/Image/Image.tsx";
 import { BUTTON_COLORS } from "../../atoms/Button/constants.ts";
-import Button from "../../atoms/Button/Button.tsx";
 import { useNavigate } from "react-router-dom";
-import { ListItemInfo } from "../../organisms/ListItemInfo/ListItemInfo.tsx";
 import { ListItemDetailsProps } from "./types.ts";
 import "./ListItemDetails.scss";
-import Loader from "../../atoms/Loader/Loader.tsx";
+import { Image, Button, ListItemInfo, Loader } from "../../index.ts";
 
 export const ListItemDetails: React.FC<ListItemDetailsProps> = ({
   name,
   types,
-  stats,
+  powers,
   abilities,
-  baseExperience,
+  experience,
   imageUrl,
   isLoading = false,
 }) => {
@@ -39,9 +36,9 @@ export const ListItemDetails: React.FC<ListItemDetailsProps> = ({
               <ListItemInfo
                 name={name}
                 types={types}
-                stats={stats}
+                powers={powers}
                 abilities={abilities}
-                baseExperience={baseExperience}
+                experience={experience}
               />
             </div>
           </div>

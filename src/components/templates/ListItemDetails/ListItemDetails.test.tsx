@@ -6,9 +6,9 @@ import { MemoryRouter } from "react-router-dom"; // Import MemoryRouter
 const mockItemDetails = {
   name: "Pikachu",
   types: ["Electric"],
-  stats: [{ name: "Speed", value: 90 }],
+  powers: [{ name: "Speed", value: 90 }],
   abilities: ["Static"],
-  baseExperience: 112,
+  experience: 112,
   imageUrl: "https://example.com/pikachu.png",
 };
 

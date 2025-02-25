@@ -1,11 +1,12 @@
 import axios from "axios";
+import { ItemAbility, ItemPower, ItemResponse, ItemType } from "./types";
 
 const API_URL = "https://pokeapi.co/api/v2/pokemon";
 export const fetchData = async ({ pageParam = 0 }: { pageParam: number }) => {
     const response = await axios.get(`${API_URL}?offset=${pageParam}&limit=10`);
     const results = response.data.results;
 
-    const items = results.map(async (result: any) => {
+    const items = results.map(async (result: ItemResponse) => {
         return {
             name: result.name,
             detailsURL: result.url,
@@ -24,12 +25,12 @@ export const fetchItemDetails = async (detailsURL: string) => {
   return {
     id: details.data.id,
     name: details.data.name,
-    types: details.data.types.map((typeInfo: any) => typeInfo.type.name),
-    powers: details.data.stats.map((statInfo: any) => {
+    types: details.data.types.map((typeInfo: ItemType) => typeInfo.type.name),
+    powers: details.data.stats.map((statInfo: ItemPower) => {
       return { name: statInfo.stat.name, value: statInfo.base_stat };
     }),
     abilities: details.data.abilities.map(
-      (abilityInfo: any) => abilityInfo.ability.name
+      (abilityInfo: ItemAbility) => abilityInfo.ability.name
     ),
     experience: details.data.base_experience,
     imageUrl: details.data.sprites.front_default,

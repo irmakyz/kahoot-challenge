@@ -1,15 +1,14 @@
 import React from "react";
 import { ListItemProps } from "./types.ts";
-import Button from "../../atoms/Button/Button.tsx";
+import { Button } from "../../index.ts";
 import "./ListItem.scss";
 import { useNavigate } from "react-router-dom";
 
-
 export const ListItem: React.FC<ListItemProps> = ({ name, detailsURL }) => {
   const navigate = useNavigate();
-  const handleOnClick = ()=>{
+  const handleOnClick = () => {
     navigate(`/details/${encodeURIComponent(detailsURL)}`);
-  }
+  };
 
   return (
     <article className='list-item'>

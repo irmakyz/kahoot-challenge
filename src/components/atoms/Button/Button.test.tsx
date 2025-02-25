@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
-import Button from "./Button.tsx";
+import { Button } from "./Button.tsx";
 import { BUTTON_SIZES } from "./constants";
 
 test("renders Button component", () => {

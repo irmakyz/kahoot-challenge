@@ -2,8 +2,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchItemDetails } from "../../services/api.ts";
-import { ListItemDetails } from "../../components/templates/ListItemDetails/ListItemDetails.tsx";
+import { ListItemDetails } from "../../components/index.ts";
 import "./Details.scss";
+import { ItemDetails } from "../../types.ts";
 
 const Details: React.FC = () => {
   const { detailsURL } = useParams<{ detailsURL: string }>();
@@ -11,14 +12,15 @@ const Details: React.FC = () => {
     data: itemDetails,
     isLoading,
     error,
-  } = useQuery({
+  } = useQuery<ItemDetails>({
     queryKey: ["itemDetails", detailsURL],
     queryFn: () => fetchItemDetails(detailsURL ?? "defaultURL"),
   });
 
   if (error) return <div className='details'>Error loading data</div>;
 
-  if (!isLoading && !itemDetails) return <div className='details'>No data found</div>;
+  if (!isLoading && !itemDetails)
+    return <div className='details'>No data found</div>;
 
   return (
     <div className='details' data-testid='details'>
@@ -26,8 +28,8 @@ const Details: React.FC = () => {
         name={itemDetails?.name}
         types={itemDetails?.types}
         abilities={itemDetails?.abilities}
-        baseExperience={itemDetails?.experience}
-        stats={itemDetails?.powers}
+        experience={itemDetails?.experience}
+        powers={itemDetails?.powers}
         imageUrl={itemDetails?.imageUrl}
         isLoading={isLoading}
       />
